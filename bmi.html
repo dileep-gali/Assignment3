@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="bmi">
+    <header>
+        <h1>BMI Calculator</h1>
+    </header>
+    <nav>
+        <ul id="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charts.html" class="charts">NutriStats</a></li>
+            <li><a href="nutrition.html">Nutrition Facts</a></li>
+            <li><a href="recipe.html" class="recipe">Recipe Box</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <form id="bmiForm">
+                <label class="textlogin">Weight in kilograms:</label>
+                <input type="number" id="weight" required> <br />
+                <br />
+                <label class="textlogin">Height in centimeters:</label>
+                <input type="number" id="height" required><br />
+                <br />
+                <button type="submit">Calculate BMI</button><br />
+                <!-- Results Box -->
+                <div id="resultsBox">
+                    <p>BMI: <span id="bmiValue">-</span></p>
+                    <p>Interpretation: <span id="bmiInterpretation">-</span></p>
+                </div>
+            </form>
+
+
+        </div>
+    </main>
+    <script>
+        document.getElementById('bmiForm').onsubmit = function (event) {
+            event.preventDefault();
+            var weight = parseFloat(document.getElementById('weight').value);
+            var height = parseFloat(document.getElementById('height').value) / 100; // Convert to meters
+            var bmi = weight / (height * height);
+            document.getElementById('bmiValue').textContent = bmi.toFixed(2);
+
+            var interpretation = '';
+            if (bmi < 18.5) {
+                interpretation = 'Underweight';
+            } else if (bmi < 25) {
+                interpretation = 'Normal weight';
+            } else if (bmi < 30) {
+                interpretation = 'Overweight';
+            } else {
+                interpretation = 'Obese';
+            }
+            document.getElementById('bmiInterpretation').textContent = interpretation;
+        };
+    </script>
+</body>
+</html>
+

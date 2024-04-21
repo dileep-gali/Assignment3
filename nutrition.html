@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrition Information</title>
+    <link rel="stylesheet" href="css/main.css"> <!-- Link to your CSS -->
+</head>
+<body id="nutrition">
+    <header>
+        <h1>Nutrition Information</h1>
+    </header>
+
+    <nav>
+        <ul id="navigation">
+            <li><a href="index.html" class="index">Home</a></li>
+            <li><a href="charts.html" class="charts">NutriStats</a></li>
+            <li><a href="nutrition.html" class="nutrition">Nutrition Facts</a></li>
+            <li><a href="recipe.html" class="recipe">Recipe Box</a></li>
+            <li><a href="about.html" class="about">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Daily Nutrition Intake</h2>
+        <p>Here's a table showing the recommended daily nutrition intake:</p>
+
+        <table class="nutrition-table">
+            <thead>
+                <tr>
+                    <th>Nutrient</th>
+                    <th>Recommended Daily Intake</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Protein</td>
+                    <td>50g</td>
+                </tr>
+                <tr>
+                    <td>Carbohydrates</td>
+                    <td>300g</td>
+                </tr>
+                <tr>
+                    <td>Fats</td>
+                    <td>70g</td>
+                </tr>
+                <tr>
+                    <td>Fiber</td>
+                    <td>25g</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Nutritional Information</h2>
+        <div id="recipesTable"></div> <!-- JavaScript will insert tables here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nutrition Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const recipes = [
+            { "title": "Grilled Chicken Tikka", "fat": "10g", "calories": "290kcal", "protein": "35g", "carbohydrates": "8g", "cuisine": "Indian" },
+            { "title": "Saag Paneer", "fat": "20g", "calories": "320kcal", "protein": "18g", "carbohydrates": "15g", "cuisine": "Indian" },
+            { "title": "Vegetable Pulao", "fat": "5g", "calories": "210kcal", "protein": "4g", "carbohydrates": "40g", "cuisine": "Indian" },
+            { "title": "Tandoori Cauliflower", "fat": "7g", "calories": "150kcal", "protein": "5g", "carbohydrates": "10g", "cuisine": "Indian" },
+            { "title": "Masoor Dal", "fat": "3g", "calories": "230kcal", "protein": "19g", "carbohydrates": "39g", "cuisine": "Indian" },
+            { "title": "Steamed Fish with Ginger", "fat": "6g", "calories": "200kcal", "protein": "22g", "carbohydrates": "3g", "cuisine": "Chinese" },
+            { "title": "Szechuan Tofu with Vegetables", "fat": "9g", "calories": "180kcal", "protein": "12g", "carbohydrates": "10g", "cuisine": "Chinese" },
+            { "title": "Chicken and Broccoli Stir-fry", "fat": "8g", "calories": "250kcal", "protein": "26g", "carbohydrates": "18g", "cuisine": "Chinese" },
+            { "title": "Garlic Spinach in Broth", "fat": "4g", "calories": "70kcal", "protein": "2g", "carbohydrates": "10g", "cuisine": "Chinese" },
+            { "title": "Mushroom and Bamboo Shoot Stir-fry", "fat": "5g", "calories": "100kcal", "protein": "6g", "carbohydrates": "15g", "cuisine": "Chinese" },
+            { "title": "Quinoa Stuffed Peppers", "fat": "9g", "calories": "320kcal", "protein": "15g", "carbohydrates": "45g", "cuisine": "Continental" },
+            { "title": "Chicken Salad with Avocado", "fat": "12g", "calories": "350kcal", "protein": "30g", "carbohydrates": "12g", "cuisine": "Continental" },
+            { "title": "Lentil Soup", "fat": "3g", "calories": "240kcal", "protein": "18g", "carbohydrates": "35g", "cuisine": "Continental" },
+            { "title": "Grilled Vegetable and Hummus Tart", "fat": "10g", "calories": "200kcal", "protein": "7g", "carbohydrates": "25g", "cuisine": "Continental" },
+            { "title": "Seared Tuna with Olive Tapenade", "fat": "13g", "calories": "310kcal", "protein": "25g", "carbohydrates": "9g", "cuisine": "Continental" }
+        ];
+
+        const container = document.getElementById('recipesTable');
+        const cuisines = [...new Set(recipes.map(recipe => recipe.cuisine))];
+
+        cuisines.forEach(cuisine => {
+            const cuisineSection = document.createElement('table');
+            const caption = cuisineSection.createCaption();
+            caption.textContent = `${cuisine} Cuisine Nutrition`;
+
+            const headerRow = cuisineSection.insertRow();
+            ['Title', 'Fat', 'Calories', 'Protein', 'Carbohydrates'].forEach(text => {
+                const headerCell = document.createElement('th');
+                headerCell.textContent = text;
+                headerRow.appendChild(headerCell);
+            });
+
+            recipes.filter(recipe => recipe.cuisine === cuisine).forEach(recipe => {
+                const row = cuisineSection.insertRow();
+                [recipe.title, recipe.fat, recipe.calories, recipe.protein, recipe.carbohydrates].forEach(text => {
+                    const cell = row.insertCell();
+                    cell.textContent = text;
+                });
+            });
+
+            container.appendChild(cuisineSection);
+        });
+    </script>
+</body>
+</html>
