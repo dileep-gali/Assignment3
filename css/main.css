@@ -1,0 +1,812 @@
+body#index{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e5f5e5; /* Default background color */
+    background-image: url("../img/Health.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure the body takes the entire viewport height */
+}
+
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+/* Default background image */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color:#e5f5e5; /* Default background color */
+}
+
+    /* Background image for the index page */
+    body#index {
+        background-image: url("../img/Health.jpg"); /* Example background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Background image for the about page */
+    body#about {
+        background-image: url("../img/Health.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding:20px 0;
+}
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+/* Navigation styles */
+nav {
+    background-color: #444;
+    padding: 10px 0;
+}
+
+#navigation a.active {
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #ADD8E6; /* Pale blue color */
+    color: #fff; /* Text color */
+}
+
+    #navigation a.active::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 10px);
+        height: calc(100% + 6px);
+        background-color: #ADD8E6; /* Pale blue color */
+        border-radius: 24px;
+        border: 2px solid #ADD8E6; /* Pale blue color */
+        z-index: -1;
+    }
+
+
+
+
+#navigation {
+    list-style-type: none;
+    text-align: center;
+}
+
+    #navigation li {
+        display: inline;
+    }
+
+        #navigation li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            #navigation li a:hover {
+                background-color: #555;
+            }
+
+
+/* Add styles for the login button */
+.login-button {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    padding: 5px 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    .login-button:hover {
+        background-color: #0056b3;
+    }
+
+/* Login page styles */
+#login {
+    background-color: #cdeccd; /* Pale green color */
+    background-image: url("../img/Health.jpg"); /* Add background image if needed */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* Other styles for login page */
+.login-container {
+    text-align: center;
+}
+
+.login-heading {
+    color: #fff; /* Text color for the heading */
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Set a fixed width for the form */
+    margin-top: 20px; /* Add space between the heading and the form */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+/* Global font color (white) */
+body,
+header,
+nav,
+#navigation a,
+main,
+footer {
+    color: #cdeccd;
+}
+
+    /* For the active navigation link */
+    #navigation a.active {
+        color: #cdeccd;
+    }
+
+
+/* Make all labels bold and text color black */
+label {
+    font-weight: bold; /* This will make the text of all <label> elements bold */
+    display: block; /* This makes the label take up its own line for better spacing */
+    margin-bottom: 5px; /* Adds a little space below each label */
+    color: black; /* Sets the text color to black */
+}
+
+/* Style the input fields */
+input[type="text"],
+input[type="submit"] {
+    width: 200px; /* Smaller width for the input boxes */
+    padding: 10px;
+    margin-bottom: 10px; /* Adds space below each input field */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black; /* Sets the text color to black */
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+/* Style the form */
+form {
+    max-width: 400px; /* Limit the form's width */
+    margin: 20px auto; /* Center the form in the middle of the page with margin */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
+    color: black; /* Sets the text color to black */
+}
+
+/* Add some styling to your footer to make it stand out */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+    footer h4 {
+        font-size: 1.2rem;
+        color: black; /* Sets the text color to black, but will be overridden by footer color */
+    }
+
+/* Style for the navigation item corresponding to the current page */
+body#index #navigation a.index,
+body#bmi #navigation a.bmi,
+body#fitness #navigation a.fit,
+body#nutrition #navigation a.nutrition,
+body#about #navigation a.about,
+body#recipe #navigation a.recipe,
+body#charts #navigation a.charts{
+    background-color: #98fb98; /* Pale green color */
+    color: #333; /* Darker color for text for better visibility */
+    border-radius: 5px; /* If you want rounded corners */
+    /* Rest of your styling for active nav item */
+}
+
+
+/* BMI page styles */
+
+body#bmi{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e5f5e5; /* Default background color */
+    background-image: url("../img/Health.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure the body takes the entire viewport height */
+}
+
+body#bmi {
+    background-image: url("../img/Health.jpg"); /* Update with the correct path to your BMI background */
+    background-size: cover;
+    background-position: center;
+}
+
+    /* BMI form specific styles */
+    body#bmi .login-form {
+        background-color: rgba(255, 255, 255, 0.9); /* Make form background slightly more opaque */
+        width: auto; /* Allow form width to be responsive */
+        max-width: 400px; /* Maximum width of the form */
+        margin: 2rem auto; /* More vertical space, centered horizontally */
+        padding: 2rem; /* Increase padding for better spacing */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for emphasis */
+    }
+
+    /* Update input styles for BMI form */
+    body#bmi input[type="text"],
+    body#bmi input[type="number"], /* Add input type number for BMI inputs */
+    body#bmi input[type="submit"] {
+        width: calc(100% - 20px); /* Full width minus padding */
+        padding: 10px; /* Padding for input fields */
+        margin: 10px 0; /* Spacing between fields */
+       
+    }
+
+/* Modify active navigation link styles for clarity and consistency */
+#navigation a.active {
+    background-color: #98fb98; /* Green color for the active link */
+    color: #FFFFFF; /* White text for better readability */
+    border-radius: 5px;
+    /* Remove the ::after pseudo-element styles if not needed */
+}
+
+#resultsBox {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 15px; /* Padding inside the box */
+    margin-top: 15px; /* Space between the button and the box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+    #resultsBox p {
+        margin: 10px 0; /* Spacing between paragraphs */
+        color: #333; /* Dark grey color for text */
+    }
+
+
+/* Styles for the Fitness Diets page */
+body#fitness{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e5f5e5; /* Default background color */
+    background-image: url("../img/Health.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure the body takes the entire viewport height */
+}
+
+
+body#fitness {
+    background-image: url("../img/Health.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#fitness-diets {
+    padding: 40px; /* Spacing around the content */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    text-align: left;
+}
+
+.diet {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 5px;
+    margin-bottom: 20px; /* Spacing between diet sections */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+    .diet h3 {
+        font-size: 1.5rem; /* Slightly larger heading for each diet */
+        color: #333; /* Darker text color for contrast */
+    }
+
+    .diet p {
+        font-size: 1rem; /* Standard text size for descriptions */
+        color: #555; /* Slightly lighter text color for readability */
+    }
+
+.diet {
+    padding: 20px;
+    border-radius: 10px; /* Soft corners */
+    margin-bottom: 20px; /* Spacing between diet sections */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #333; /* Default text color */
+}
+
+    /* Fat Burner diet background image */
+    .diet.fat-burner {
+        background-image: url("../img/fatburn.jpg"); /* Replace with the correct path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; /* Avoid repetition if the image is smaller than the div */
+    }
+
+    /* Get Fitter diet background image */
+    .diet.get-fitter {
+        background-image: url("../img/fitfood.jpg"); /* Replace with the correct path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Stress Buster diet background image */
+    .diet.stress-buster {
+        background-image: url("../img/stress-buster.jpg"); /* Replace with the correct path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+/* Styles for the popup/modal box */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: white; /* White background for the popup */
+    padding: 20px; /* Padding inside the popup */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    z-index: 1000; /* High z-index to appear above other elements */
+}
+
+    .popup.visible {
+        display: block; /* Show the popup when it's visible */
+    }
+
+/* Overlay to darken the background when the popup is visible */
+.overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Below the popup but above other elements */
+}
+
+    .overlay.visible {
+        display: block; /* Show the overlay when it's visible */
+    }
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+    .overlay.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+    .popup.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+.popup {
+    color: #000; /* Explicitly set text color to black */
+    /* Additional styling */
+}
+
+.diet {
+    color: #fff; /* Set text color to white */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+    /* Optional: Apply color property to individual elements if needed */
+    .diet h3 {
+        color: #fff; /* Ensure headings are white */
+    }
+
+    .diet p {
+        color: #fff; /* Ensure paragraphs are white */
+    }
+
+/* Styles specific to the About Us page */
+body#about {
+    background-image: url("../img/Health.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.about-container {
+    color: black;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 1000px; /* Adjusted for wider boxes */
+    margin: 0 auto;
+}
+
+.team-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    flex: 1;
+    min-width: 250px; /* Wider boxes */
+    max-width: 300px; /* Wider boxes */
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+    .team-member img {
+        max-width: 100%; /* Ensure image doesn't exceed container */
+        height: 150px; /* Fixed height for uniformity */
+        width: 150px; /* Fixed width for uniformity */
+        border-radius: 50%; /* Circular shape */
+    }
+
+    .team-member h3 {
+        color: black; /* Ensure text within team-member is black */
+        margin: 10px 0;
+    }
+
+    .team-member p {
+        color: black; /* Ensure description text within team-member is black */
+        font-size: 1rem;
+    }
+
+/* New section for Database Schema */
+.database-schema {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 1000px; /* Adjust width to fit the schema */
+}
+
+    .database-schema h2 {
+        color: black; /* Ensure text is black */
+        font-size: 2rem;
+    }
+
+    .database-schema img {
+        width: 80%; /* Adjust to an appropriate size */
+        height: auto; /* Maintain aspect ratio */
+        border: 1px solid black; /* Add a border for styling */
+    }
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Dark background for footer */
+    color: white; /* White text color */
+}
+
+
+
+/* Styles specific to the Recipe page */
+body#recipe{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e5f5e5; /* Default background color */
+    background-image: url("../img/Health.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure the body takes the entire viewport height */
+}
+
+body#recipe {
+    background-image: url("../img/Health.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.recipe-container {
+    padding: 30px; /* Reduced padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px; /* Reduced width */
+    margin: 0 auto; /* Center the content */
+    text-align: center; /* Align text within the container to the center */
+}
+
+    .recipe-container h1,
+    .recipe-container h2,
+    .recipe-container h3 {
+        color: black; /* Set heading text to black */
+        font-size: 24px; /* Font size for headings */
+        text-align: center; /* Center-align the headings */
+    }
+
+.recipe-list .recipe-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px; /* Reduced padding */
+    margin-bottom: 10px; /* Reduced margin */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .recipe-list .recipe-item h3 {
+        color: black; /* Make recipe names black */
+    }
+
+    .recipe-list .recipe-item p {
+        color: black; /* Make recipe descriptions black */
+    }
+
+.recipe-container input,
+.recipe-container textarea,
+.recipe-container button {
+    border: 1px solid #ccc; /* Borders for inputs and buttons */
+    border-radius: 5px; /* Rounded borders */
+    padding: 8px; /* Reduced padding */
+}
+
+.recipe-container button {
+    cursor: pointer;
+    background-color: #007bff; /* Button background color (original blue) */
+    color: white; /* Button text color */
+}
+
+    .recipe-container button:hover {
+        background-color: #0056b3; /* Button hover color */
+    }
+
+.recipe-list .recipe-item button {
+    padding: 5px; /* Reduced padding for buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded button borders */
+    background-color: #007bff; /* Blue button color */
+    color: white; /* White button text */
+}
+
+    .recipe-list .recipe-item button:hover {
+        background-color: #0056b3; /* Button hover color */
+    }
+/* General style for text to be black */
+.recipe-container h1,
+.recipe-container h2,
+.recipe-container h3,
+.recipe-container p {
+    color: black; /* Ensures text color is black */
+}
+
+/* Specific styling for the recipe list */
+.recipe-list .recipe-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .recipe-list .recipe-item h3,
+    .recipe-list .recipe-item p {
+        color: black; /* Sets text color to black for recipe items */
+    }
+
+.recipe-container .button {
+    cursor: pointer;
+    background-color: #007bff; /* Blue button background */
+    color: white; /* White button text */
+}
+
+
+/* Nutrition page styles */
+body#nutrition {
+    background-image: url("../img/Health.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Global table styles */
+table {
+    width: auto;
+    border-collapse: collapse; /* Ensures borders don't double up */
+    margin: 20px auto; /* Center the table and add spacing */
+    background-color: white; /* White background for the tables */
+    text-align: left; /* Align text to the left */
+}
+
+    /* Styles for the nutrition table */
+    table.nutrition-table {
+        width: 80%; /* Make the nutrition table take 80% of the container width */
+        margin: 20px auto; /* Center the table horizontally */
+        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+        color: black; /* Black text color */
+    }
+
+        table.nutrition-table th,
+        table.nutrition-table td {
+            border: 1px solid black; /* Light gray border */
+            padding: 10px; /* Padding for table cells */
+            text-align: left; /* Align text to the left */
+        }
+
+        table.nutrition-table th {
+            background-color: #333; /* Light gray background for headers */
+            font-weight: bold; /* Bold text for headers */
+        }
+
+        table.nutrition-table td {
+            background-color: #fff; /* White background for table data */
+            font-size: 1rem; /* Standard text size */
+        }
+
+        table.nutrition-table tr:nth-child(even) {
+            background-color: #f9f9f9; /* Alternate row background */
+        }
+
+/* Styles for general table content */
+th,
+td {
+    color: black; /* Set the text color to black for table headers and cells */
+    padding: 12px 15px;
+    border: 1px solid black; /* Light grey border */
+}
+
+th {
+    background-color: #333; /* Dark background for headers */
+    color: white; /* White text for header */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px; /* Padding for footer */
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text color */
+}
+
+/* Center align h2, p, th, td for the Nutrition page */
+body#nutrition h2,
+body#nutrition p,
+body#nutrition th,
+body#nutrition td {
+    text-align: center; /* Align text to the center */
+}
+
+/* charts page styles */
+body#charts {
+    background-image: url("../img/Health.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body#charts {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #333;
+}
+
+.chart-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+    footer p {
+        margin: 0;
+    }
+
+.chart-container canvas {
+    height: 400px;
+    width: auto;
+}
