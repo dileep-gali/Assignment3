@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Nutrition Charts</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body id="charts">
+    <header>
+        <h1>Detailed Nutrition Charts</h1>
+    </header>
+
+    <!-- Navigation from index.html -->
+    <nav>
+        <ul id="navigation">
+            <li><a href="index.html" class="index">Home</a></li>
+            <li><a href="charts.html" class="charts">NutriStats</a></li>
+            <li><a href="bmi.html" class="bmi">BMI</a></li>
+            <li><a href="fit.html" class="fit">Diet Plans</a></li>
+            <li><a href="nutrition.html" class="nutrition">Nutrition Facts</a></li>
+            <li><a href="recipe.html" class="recipe">Recipe Box</a></li>
+            <li><a href="about.html" class="about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content with charts -->
+    <div class="chart-container">
+        <canvas id="proteinBarChart" aria-label="Protein Content per Recipe" role="img"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="fatBarChart" aria-label="Fat Content per Recipe" role="img"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="carbBarChart" aria-label="Carbohydrate Content per Recipe" role="img"></canvas>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nutrition Tracker. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Chart data and initialization code (same as before)
+        const labels = ['Grilled Chicken', 'Lentil Soup', 'Beef Stew', 'Vegetable Stir Fry', 'Salmon Salad', 'Pork Tacos', 'Quinoa Bowl'];
+
+        const barChartOptions = {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Amount in grams'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Recipes'
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+                mode: 'index',
+                intersect: false
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                },
+                title: {
+                    display: true,
+                    text: 'Protein Content per Recipe',
+                    font: {
+                        size: 18
+                    }
+                }
+            }
+        };
+
+        new Chart(document.getElementById('proteinBarChart'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: 'Protein (g)',
+                        data: [25, 18, 30, 15, 27, 20, 19],
+                        backgroundColor: 'rgba(53, 162, 235, 0.7)'
+                    }
+                ]
+            },
+            options: {
+                ...barChartOptions,
+                plugins: {
+                    ...barChartOptions.plugins,
+                    title: {
+                        ...barChartOptions.plugins.title,
+                        text: 'Protein Content per Recipe'
+                    }
+                }
+            }
+        });
+
+        // Remaining chart initialization (unchanged)
+        new Chart(document.getElementById('fatBarChart'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: 'Fat (g)',
+                        data: [10, 5, 15, 8, 13, 18, 7],
+                        backgroundColor: 'rgba(231, 76, 60, 0.7)'
+                    }
+                ]
+            },
+            options: {
+                ...barChartOptions,
+                plugins: {
+                    ...barChartOptions.plugins,
+                    title: {
+                        ...barChartOptions.plugins.title,
+                        text: 'Fat Content per Recipe'
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('carbBarChart'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: 'Carbohydrates (g)',
+                        data: [1, 30, 20, 25, 5, 45, 35],
+                        backgroundColor: 'rgba(46, 204, 113, 0.7)'
+                    }
+                ]
+            },
+            options: {
+                ...barChartOptions,
+                plugins: {
+                    ...barChartOptions.plugins,
+                    title: {
+                        ...barChartOptions.plugins.title,
+                        text: 'Carbohydrate Content per Recipe'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

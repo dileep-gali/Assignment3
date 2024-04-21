@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Diets</title>
+    <link rel="stylesheet" href="css/main.css"> <!-- Link to your CSS file -->
+</head>
+<body id="fitness">
+    <header>
+        <h1>NutriNest - Fitness Diets</h1>
+    </header>
+        <nav>
+            <ul id="navigation">
+                <li><a href="index.html" class="index">Home</a></li>
+                <li><a href="charts.html" class="charts">NutriStats</a></li>
+                <li><a href="bmi.html" class="bmi">BMI</a></li>
+                <li><a href="fit.html" class="fit">Diet Plans</a></li>
+                <li><a href="nutrition.html" class="nutrition">Nutrition Facts</a></li>
+                <li><a href="recipe.html" class="recipe">Recipe Box</a></li>
+                <li><a href="about.html" class="about">About</a></li>
+            </ul>
+        </nav>
+    
+
+    <main>
+        <section id="fitness-diets">
+            <h2>Fitness Diet Plans</h2>
+            <div class="diet fat-burner" onclick="showPopup('fat-burner')">
+                <!-- Click action to show popup -->
+                <h3>Fat Burner</h3>
+                <p>The Fat Burner diet focuses on high-protein, low-carb meals designed to boost metabolism and promote fat loss. It often includes lean meats, fish, and lots of vegetables.</p>
+            </div>
+            <div class="diet get-fitter" onclick="showPopup('get-fitter')">
+                <!-- Click action to show popup -->
+                <h3>Get Fitter</h3>
+                <p>The Get Fitter diet emphasizes a balanced intake of proteins, carbs, and healthy fats. It is designed for individuals looking to improve overall fitness levels, with a focus on energy-boosting foods.</p>
+            </div>
+            <div class="diet stress-buster" onclick="showPopup('stress-buster')">
+                <!-- Click action to show popup -->
+                <h3>Stress Buster</h3>
+                <p>The Stress Buster diet includes foods known to reduce stress and promote relaxation. It typically involves plenty of fruits, whole grains, and foods rich in antioxidants and magnesium.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Popup structure -->
+    <div class="overlay" id="overlay" onclick="hidePopup()"></div> <!-- Overlay to close popup -->
+    <div class="popup" id="popup">
+        <h3 id="popup-title"></h3> <!-- Title for the popup -->
+        <div id="popup-content"></div> <!-- Content area for diet-specific information -->
+        <button onclick="hidePopup()">Close</button> <!-- Button to close the popup -->
+    </div>
+
+    <script src="js/main.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
