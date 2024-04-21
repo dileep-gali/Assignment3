@@ -86,7 +86,7 @@
         cuisines.forEach(cuisine => {
             const cuisineSection = document.createElement('table');
             const caption = cuisineSection.createCaption();
-            caption.textContent = ${cuisine} Cuisine Nutrition;
+            caption.textContent = `${cuisine} Cuisine Nutrition`;
 
             const headerRow = cuisineSection.insertRow();
             ['Title', 'Fat', 'Calories', 'Protein', 'Carbohydrates'].forEach(text => {
